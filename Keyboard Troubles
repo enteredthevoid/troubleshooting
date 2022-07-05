@@ -1,0 +1,38 @@
+# Caps Lock delay
+
+If you using Caps Lock for writing instead of shift, writings may be appear like this: "HEllo WOrld".
+
+## Solution 1
+
+### For GNOME - DE
+    Go to your keyboard options, select your layout then keyboard layouts options -> Caps Lock behavior -> then select "Caps Lock toggles normal capitalization of alphabetic characters"
+
+If there is no setting in the setting then you need to download gnome tweaks through your terminal,
+
+    for debian, '''sudo apt-get install gnome-tweaks''' || '''sudo apt-get install gnome-tweak-tool'''
+    for arch, sudo pacman -S gnome-tweaks
+    for void, sudo xbps-install gnome-teaks || xi gnome-twaks
+
+Open gnome-tweaks
+
+    Keyboard & Mouse -> Additional Layout Options -> Caps Lock key behavior "Caps Lock toggles normal capitalization of alphabetic characters" or "Caps Lock Toggles ShiftLock"
+
+### For KDE PLASMA - DE
+
+    Settings -> System Settings -> under the Hardware you can see Keyboard (or just search for keyboard), click in the Advanced tab, click the keyboard options, then click the CapsLock key behavior (there maybe two of these), and click the Caps Lock Toggles ShiftLock.
+
+## Solution 2
+
+    Write these on terminal
+
+    git clone https://github.com/hexvalid/Linux-CapsLock-Delay-Fixer
+
+    cd Linux-CapsLock-Delay-Fixer
+
+    bash -ic sh bootstrap.sh || chmod +x bootstrap.sh {then} sudo ./bootstrap.sh
+
+    sudo mv bootstrap.sh fixpatch /usr/local/bin
+
+For non non-sudo users
+
+You can smpliy add the bootstrap.sh to your Startup Applications.
